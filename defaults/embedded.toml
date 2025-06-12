@@ -1,0 +1,18 @@
+﻿# defaults/embedded.toml
+[system]
+target_platform = "cortex-m7"
+sampling_rate_hz = 2000
+channel_count = 8
+buffer_size_samples = 4096
+latency_target_ms = 20
+
+[safety]
+watchdog_timeout_ms = 100
+hardware_limits_enabled = true
+emergency_stop_gpio_pin = 12
+max_force_newtons = 50.0
+
+[performance]
+max_cpu_usage_percent = 80
+max_memory_usage_bytes = 64_000_000
+thread_priority = "realtime"
